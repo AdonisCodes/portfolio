@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File to Base64 Converter</title>
+</head>
+<body>
+    <input type="file" id="fileInput" accept=".mp3" onchange="convertFileToBase64()">
+    <pre id="base64Output"></pre>
+
+    <script>
+        function convertFileToBase64() {
+            const fileInput = document.getElementById('fileInput');
+            const base64Output = document.getElementById('base64Output');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    const base64String = event.target.result.split(',')[1];
+                    base64Output.textContent = base64String;
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                base64Output.textContent = 'No file selected.';
+            }
+        }
+    </script>
+</body>
+</html>
