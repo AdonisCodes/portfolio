@@ -68,7 +68,7 @@ const Contact = () => {
 
           setForm({
             name: "",
-            
+
             email: "",
             message: "",
           });
@@ -92,7 +92,10 @@ const Contact = () => {
     labels={{
       totalCount: `{{count}} contributions in the last year`,
     }}
-    transformData={selectLastHalfYear}/>
+    theme={{
+      dark: ['#1f1f1f', 'red']
+    }}
+    />
     </motion.div>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
