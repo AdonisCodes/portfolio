@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import GitHubCalendar from "react-github-calendar";
 
 const Contact = () => {
   const formRef = useRef();
@@ -27,22 +28,38 @@ const Contact = () => {
     });
   };
 
+  const selectLastHalfYear = contributions => {
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth();
+    const shownMonths = 13
+  
+    return contributions.filter(activity => {
+      const date = new Date(activity.date);
+      const monthOfDay = date.getMonth();
+  
+      return (
+        date.getFullYear() === currentYear &&
+        monthOfDay > currentMonth - shownMonths &&
+        monthOfDay <= currentMonth
+      );
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_63r85f9',
+        "template_8x0cciz",
         {
-          from_name: form.name,
+          name: form.name,
           to_name: "Simon Ferns",
-          from_email: form.email,
+          email: form.email,
           to_email: "s.f.businessacc@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "CaJOJpsMV7iuCquNE"
       )
       .then(
         () => {
@@ -66,8 +83,16 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden justify-center`}
+      className={`xl:mt-12 grid xl:flex-row flex-col-reverse gap-10 overflow-hidden justify-center `}
     >
+
+<motion.div variants={slideIn("right", "tween", 0.2, 1)} className='flex-[0.25]'>
+    <GitHubCalendar username="AdonisCodes"
+    labels={{
+      totalCount: `{{count}} contributions in the last year`,
+    }}
+    transformData={selectLastHalfYear}/>
+    </motion.div>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black p-8 rounded-2xl'
