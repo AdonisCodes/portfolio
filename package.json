@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codesweetly/react-youtube-playlist": "^1.0.16",
     "@emailjs/browser": "^3.10.0",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",
@@ -21,6 +22,7 @@
     "react-three-fiber": "^6.0.13",
     "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
+    "react-youtube": "^10.1.0",
     "three": "^0.149.0"
   },
   "devDependencies": {
