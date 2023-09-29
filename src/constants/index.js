@@ -154,14 +154,14 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      '1. Got the job done quickly. 2. Responsive, and thoughtful 3. A pleasure to interact with.',
+      "1. Got the job done quickly. 2. Responsive, and thoughtful 3. A pleasure to interact with.",
     name: "Salman Farmanfarmaian",
     designation: "125$",
     company: "private client",
     image: salman,
     stars: 5,
-    proof: 'dummy_url',
-    caseStudy: 'dummy_url',
+    proof: "dummy_url",
+    caseStudy: "dummy_url",
   },
   {
     testimonial:
@@ -171,8 +171,8 @@ const testimonials = [
     company: "Ecom Store Scraper",
     image: guillaum,
     stars: 5,
-    proof: 'dummy_url',
-    caseStudy: 'dummy_url',
+    proof: "dummy_url",
+    caseStudy: "dummy_url",
   },
   {
     testimonial:
@@ -209,11 +209,11 @@ const projects = [
       {
         name: "zustand",
         color: "blue-text-gradient",
-      }
+      },
     ],
     image: cookiejar,
     source_code_link: "https://github.com/",
-    live_demo: "https://cookiejar.co/"
+    live_demo: "https://cookiejar.co/",
   },
   {
     name: "SuperHero.",
@@ -235,7 +235,7 @@ const projects = [
     ],
     image: superHero,
     source_code_link: "https://github.com/",
-    live_demo: "https://super-hero-api-app-lol.onrender.com/"
+    live_demo: "https://super-hero-api-app-lol.onrender.com/",
   },
   {
     name: "And Many more...",
@@ -271,14 +271,13 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        
         name: "APIS",
         color: "blue-text-gradient",
-      }
+      },
     ],
     image: "https://placehold.co/600x400?text=Check My Github&font=roboto",
     source_code_link: "https://github.com/AdonisCodes",
-    live_demo: "https://github.com/AdonisCodes"
+    live_demo: "https://github.com/AdonisCodes",
   },
 ];
 
