@@ -1,12 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import axios from "axios";
-import Modal from "react-modal";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useEffect } from "react";
+
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+} from "@chakra-ui/react";
+
+const VideoModal = ({ isOpen, onClose, title, videoId }) => {
+  return (
+    <ChakraProvider>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{ base: "80vw", md: "500px" }}
+      >
+        <ModalOverlay
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <ModalContent
+            bg="black"
+            height={{ base: "80vh", md: "85vh" }}
+            mx="3"
+            border="1px solid white"
+          >
+            <ModalHeader color="white">{title}</ModalHeader>
+            <ModalCloseButton color="white" />
+            <ModalBody height="90vh">
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={title}
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </ModalBody>
+          </ModalContent>
+        </ModalOverlay>
+      </Modal>
+    </ChakraProvider>
+  );
+};
 
 const API_KEY = "AIzaSyBbChToYFyckDdNxxawgP3zSbFYuDtpmsM";
 const CHANNEL_ID = "UC8ZHsW4tHGVavsIRSPThKsw";
@@ -44,7 +90,6 @@ const VideoCard = ({ index, title, description, thumbnail, videoId }) => {
 
   const handleOpenModal = () => {
     setModalIsOpen(true);
-    console.log("open");
   };
 
   const handleCloseModal = () => {
@@ -76,21 +121,9 @@ const VideoCard = ({ index, title, description, thumbnail, videoId }) => {
 
             <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
               <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
-                <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      // eslint-disable-next-line max-len
-                      d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.5 10.5l-7 5V5l7 5z"
-                    />
-                  </svg>
-                </a>
+                <i className="fab fa-youtube text-white">
+                  {/* Youtube fa-youtube icon */}
+                </i>
               </div>
             </div>
           </div>
@@ -102,22 +135,12 @@ const VideoCard = ({ index, title, description, thumbnail, videoId }) => {
         </Tilt>
       </motion.div>
 
-      <Modal
+      <VideoModal
         isOpen={modalIsOpen}
-        onRequestClose={handleCloseModal}
-        contentLabel="Video Player Modal"
-        className="modal"
-        overlayClassName="overlay"
-      >
-        <div className="video-container">
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}`}
-            title={title}
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </Modal>
+        onClose={handleCloseModal}
+        title={title}
+        videoId={videoId}
+      />
     </>
   );
 };
