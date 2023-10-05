@@ -1,0 +1,83 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>https://cookiejar.co/</loc>
+  </url>
+
+  <!-- Discover Page -->
+  <url>
+    <loc>https://cookiejar.co/discover</loc>
+  </url>
+
+  <!-- Categories Page -->
+  <url>
+    <loc>https://cookiejar.co/categories</loc>
+  </url>
+
+  <!-- Leaderboard Page -->
+  <url>
+    <loc>https://cookiejar.co/leaderboard</loc>
+  </url>
+
+  <!-- Add Site Page -->
+  <url>
+    <loc>https://cookiejar.co/addsite</loc>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://cookiejar.co/contact</loc>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://cookiejar.co/about</loc>
+  </url>
+
+  <url>
+    <loc>https://cookiejar.co/profile/@null</loc>
+  </url>
+
+<url>
+    <loc>https://cookiejar.co/Arts</loc>
+ </url>
+<url>
+    <loc>https://cookiejar.co/Health</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Humor</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Literature</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Music</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Science%20and%20Mathematics</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Technology</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Animals</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Education</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Personal%20Sites</loc>
+ </url>
+
+<url>
+    <loc>https://cookiejar.co/Business</loc>
+ </url>
+</urlset>
