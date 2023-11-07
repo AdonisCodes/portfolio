@@ -247,31 +247,6 @@ const projects = [
     source_code_link: "https://github.com/AdonisCodes/Project-Vidi",
     live_demo: "https://vidi.simonferns.com/",
   },
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "chakra-ui",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "zustand",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: cookiejar,
-    source_code_link: "https://github.com/",
-    live_demo: "https://cookiejar.co/",
-  },
   {
     name: "SuperHero.",
     description:
