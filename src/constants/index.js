@@ -186,10 +186,67 @@ const testimonials = [
 
 const projects = [
   {
-    name: "CookieJar",
+    name: "Project-Vidi",
     description:
-      "Web-based platform that allows users to like, dislike & comment on websites. This project is for a client ( I am a fulltime contractor & client has requested I take payed partnership of the app :)",
+      "Vidi is a collection of AI content repurposing and influencer tools, as well as a collection of utility tools and open-source repositories.",
     tags: [
+       {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "chakra-ui",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GO",
+        color: "green-text-gradient",
+      },
+      {
+        name: "openai",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scala",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "docker",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "kubernetes",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "And about 50 unique technologies more...",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: 'https://vidi.simonferns.com/vidi.png',
+    source_code_link: "https://github.com/AdonisCodes/Project-Vidi",
+    live_demo: "https://vidi.simonferns.com/",
+  },
       {
         name: "react",
         color: "blue-text-gradient",
