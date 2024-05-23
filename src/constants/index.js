@@ -186,17 +186,20 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Project-Vidi",
+    name: "Automa",
     description:
-      "Vidi is a collection of AI content repurposing and influencer tools, as well as a collection of utility tools and open-source repositories.",
+      "Automa is an automation sulation made for humans. Allowing everyone to automate Any social media at the click of a few buttons.",
     tags: [
        {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "swift",
         color: "green-text-gradient",
+      },
+      { 
+        name: "supabase", color: "green-text-gradient",
       },
       {
         name: "mongodb",
