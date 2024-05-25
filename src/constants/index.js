@@ -247,8 +247,8 @@ const projects = [
       },
     ],
     image: 'https://github.com/Automa-Automations/.github/assets/122154257/b1933428-b151-4117-8549-8f357af3bf72',
-    source_code_link: "https://github.com/AdonisCodes/Project-Vidi",
-    live_demo: "https://vidi.simonferns.com/",
+    source_code_link: "https://github.com/Automa-Automations/",
+    live_demo: "https://youtube.com/@AdonisCodes",
   },
   {
     name: "SuperHero.",
