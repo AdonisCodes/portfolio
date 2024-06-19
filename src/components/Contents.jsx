@@ -105,7 +105,7 @@ const VideoCard = ({ index, title, description, thumbnail, videoId }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-black p-5 rounded-2xl sm:w-[360px] w-full"
+          className="bg-red p-5 rounded-2xl sm:w-[360px] w-full"
           style={{ border: "1px solid white" }}
         >
           <div
