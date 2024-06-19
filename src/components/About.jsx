@@ -7,7 +7,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+export const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -48,7 +48,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a skilled software developer with experience in TypeScript,
-        JavaScript, C and Python, and expertise in frameworks like React, Node.js, NextJS & many niche AI and Automation frameworks like Langchain, Selenium, Puppeteer. I'm a quick learner and collaborate closely with clients to
+        JavaScript, Swift, C, and Python, and expertise in frameworks like React, Node.js, NextJS & many niche AI and Automation frameworks like Langchain, Frida/ADB, Docker & more. I'm a quick learner and collaborate closely with clients to
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
